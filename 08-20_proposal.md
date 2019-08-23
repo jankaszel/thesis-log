@@ -1,7 +1,7 @@
 ---
 title: A Thesis Proposal
 category: entry
-date: 08-20-2019
+date: 2019-08-20
 ---
 
 Coming from Computer Science, research workflows in the Digital Humanities (DH) seem innately different when regarding the employment of digital tools. After all, the computer scientist's field of study concerns actual computers and their theoretical and practical capabilities. However, researchers in the Digital Humanities often bring a pragmatic approach to computers, given that their main concern, at least in the Classics, isn't the computer itself.

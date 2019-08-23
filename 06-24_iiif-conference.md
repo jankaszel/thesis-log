@@ -2,7 +2,7 @@
 title: IIIF Conference
 location: Goettingen, Germany
 category: conference
-date: 06-24-2019
+date: 2019-06-24
 ---
 
 A couple of weeks ago, my thesis supervisor Prof. Dr. Gregory Crane suggested to me visiting the IIIF Conference 2019, which fortunately took place in beautiful Göttingen, Germany. It has been a fantastic opportunity to actually get to know the impact of IIIF as a technology to create a standardized layer for organizing image data within and among institutions on a global scale.
