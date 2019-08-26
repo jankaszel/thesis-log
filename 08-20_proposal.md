@@ -13,12 +13,7 @@ But relying on platforms to manage one's data isn't sufficient—they may raise 
 
 ## Peer-to-Peer Systems
 
-One solution to the platform *situation* could be peer-to-peer (P2P) systems: Distributing data directly among researchers—they may raise questions in regard to censorship, privacy, data ownership, open access, among many others. Recently, [GitHub blocked users from Iran and Syria](https://techcrunch.com/2019/07/29/github-ban-sanctioned-countries/), to give an idea of some of the implication of increasing reliance on platforms.
-
-
-## Peer-to-Peer Systems
-
-One solution to the platform *situation* could be peer-to-peer (P2P) systems: Distributing data directly among researchers—or, more generally, peers—without making additional stops at centralized servers. This suits well oncerning collaboration itself: If I want to collaborate with someone, I simply connect to their computer and ask for the respective data. 
+One solution to the platform *situation* could be peer-to-peer (P2P) systems: Distributing data directly among researchers—or, more generally, peers—without making additional connections to centralized servers. This suits well oncerning collaboration itself: If I wanted to collaborate with someone, I would simply connect to their computer and ask for the respective data. 
 
 As DH workflows to some degree originate from the notion of Hypertext and Hypermedia ([Nelson, 1965](https://dl.acm.org/citation.cfm?id=806036)), there are two P2P projects one could concern: [IPFS](https://ipfs.io/) and [Dat](https://dat.foundation/) both are P2P hypermedia protocols with each an ecosystem of implementations and applications. They allow for peer-to-peer sharing of arbitrary data as well as whole folders of files, while enabling discovery of peers without the need of a centralized server infrastructure. While IPFS offers [an implementation in Go](https://github.com/ipfs/go-ipfs), Dat has a reference implementation in JavaScript built upon [hypercore](https://github.com/mafintosh/hypercore) ([Ogden et al., 2017](https://github.com/datprotocol/whitepaper/blob/master/dat-paper.pdf)).
 
