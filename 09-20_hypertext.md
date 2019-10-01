@@ -1,5 +1,5 @@
 ---
-title: ACM HT‘19: We Came for the Hyper and stayed for the Text
+title: "ACM HT‘19: We Came for the Hyper and stayed for the Text"
 location: Hof, Germany
 category: conference
 date: 2019-09-20
