@@ -5,7 +5,7 @@ category: conference
 date: 2019-09-20
 ---
 
-Last week, [Johannes](https://twitter.com/codeislego) and I visited the ACM Conference for Hypertext and Social Media, [HT'09](https://human.iisys.de/ht2019/), in Hof, Germany. We had a fantastic time---a research project that emerged from a student project at one of [Gregory Crane's](http://www.perseus.tufts.edu/hopper/about/who/gregoryCrane) labs at Leipzig University's Digital Humanities chair [made it to a short paper](https://dl.acm.org/citation.cfm?id=3343667) got accepted at HT'09.
+Last week, [Johannes](https://twitter.com/codeislego) and I visited the ACM Conference for Hypertext and Social Media, [HT'09](https://human.iisys.de/ht2019/), in Hof, Germany. We had a fantastic time---a research project that emerged from a student project at one of [Gregory Crane's](http://www.perseus.tufts.edu/hopper/about/who/gregoryCrane) labs at Leipzig University's Digital Humanities chair [made it to a short paper](https://dl.acm.org/citation.cfm?id=3343667) got accepted at HT'19.
 
 Language barriers, so to say, were just one kind of walls the conference aimed at tearing down. Our paper discussed preliminary work on [a project dubbed 'Mediating Hafiz'](/mediating-hafiz), where we describe an approach for combining Citizen Science (learnersourcing, in particular; [Kim, 2015](https://dspace.mit.edu/handle/1721.1/101464)) and computational transliteration methods for tackling ambiguity in the Persian language, Farsi. By incorporting audio as second modality to script, we basically created a spatially and temporally aligned corpus---micro-level hypermedia, basically.
 
