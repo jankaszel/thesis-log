@@ -22,4 +22,4 @@ As DH workflows to some degree originate from the notion of Hypertext and Hyperm
 
 Considering the above concerns on platforms—ownership, privacy, open access—, I aim to evaluate the utilization of a P2P hypermedia protocol for sharing annotation data among researchers in the Digital Humanities with a novel P2P collaboration system. Additional to creating a reference implementation for that system, I will analyze the usability of the employed P2P functionality with user studies.
 
-The thesis will be conducted at the Leipzig University's Digital Humanities chair, supervised by Dr. Thomas Koentges and Gregory Crane of Tufts University.
+The thesis will be conducted at the Leipzig University's Digital Humanities chair, supervised by Dr. Thomas Koentges from Leipzig University and Gregory Crane from Tufts University.
