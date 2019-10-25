@@ -8,7 +8,7 @@ For our ongoing efforts with [Mediating Hafiz](https://kassel.works/mediating-ha
 
 Kleppmann et al. made a point for [local-first software](https://www.inkandswitch.com/local-first.html), and their pledge also applies to research---why have your data tucked away in data silos, prone to platforms’ authority, when you can have it fully available on your local machine? Even with today’s limited browser APIs, storage backends such as [IndexedDB](https://www.w3.org/TR/IndexedDB/) and [upcoming proprietary APIs](https://web.dev/native-file-system/) allow for persisting data locally.
 
-## Going Full P2P
+## Going Full-P2P
 
 From my [thesis work](https://kassel.works/thesis) I knew about Mathias Buus’ [hyperdb](https://firebase.google.com/products/firestore/), a distributed key-value database built on top of [hypercore](https://firebase.google.com/products/firestore/). hyperdb entails many of hypercore’s prospects: Sparse replication allows to just exchange parts of the database. Continuous replication enables to exchange data in real-time. And hypercore's public-key cryptography makes selective write authorization possible---among even more functionality.
 
