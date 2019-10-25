@@ -4,13 +4,13 @@ category: entry
 date: 2019-10-25
 ---
  
-For our ongoing efforts with [Mediating Hafiz](/mediating-hafiz), we recently aimed at developing an application for collaborative real-time transcription of Persian-language texts. This meant we'd need to find a storage for the 7000-verse-strong corpus and user-provided transcription data. Our first attempt included using [Google's Firestore](https://firebase.google.com/products/firestore/), but we became frustrated: Setting it up was easy, but Firestore was slow for us---we had [issues with querying](https://firebase.google.com/docs/reference/js/firebase.firestore.Query.html) our data, and felt like we lacked control.
+For our ongoing efforts with [Mediating Hafiz](/mediating-hafiz), we recently aimed at developing an application for collaborative real-time transcription of Persian-language texts. This meant we'd need to find storage for the 7000-verse-strong corpus and user-provided transcription data. Our first attempt included using [Google's Firestore](https://firebase.google.com/products/firestore/), but we became frustrated: Setting it up was easy, but Firestore was slow for us---we had [issues with querying](https://firebase.google.com/docs/reference/js/firebase.firestore.Query.html) our data, and felt like we lacked control.
 
 Kleppmann et al. made a point for [local-first software](https://www.inkandswitch.com/local-first.html), and their pledge also applies to research---why have your data tucked away in data silos, prone to platforms’ authority, when you can have it fully available on your local machine? Even with today’s limited browser APIs, storage backends such as [IndexedDB](https://www.w3.org/TR/IndexedDB/) and [upcoming proprietary APIs](https://web.dev/native-file-system/) allow for persisting data locally.
 
 ## Going Full-P2P
 
-From my [thesis work](https://kassel.works/thesis) I knew about Mathias Buus’ [hyperdb](https://firebase.google.com/products/firestore/), a distributed key-value database built on top of [hypercore](https://firebase.google.com/products/firestore/). hyperdb entails many of hypercore’s prospects: Sparse replication allows to just exchange parts of the database. Continuous replication enables to exchange data in real-time. And hypercore's public-key cryptography makes selective write authorization possible---among even more functionality.
+From my [thesis work](https://kassel.works/thesis), I knew about Mathias Buus’ [hyperdb](https://firebase.google.com/products/firestore/), a distributed key-value database built on top of [hypercore](https://firebase.google.com/products/firestore/). hyperdb entails many of hypercore’s prospects: Sparse replication allows to just exchange parts of the database. Continuous replication enables to exchange data in real-time. And hypercore's public-key cryptography makes selective write authorization possible---among even more functionality.
 
 We gave it a shot and migrated our whole document-based database into a string-based key-value format... and it worked, sort of. These are our learnings from building an architecture with hyperdb:
 
@@ -26,7 +26,7 @@ In the end, our experiment did work out, somehow, but we’d rather build upon a
 
 In [our prior work](https://dl.acm.org/citation.cfm?id=3343667), we’ve worked with a CouchDB backend---a document-based NoSQL database that includes a Rest API out-of-the-box. More interestingly, CouchDB follows a multi-master approach: Opposed to master-slave architectures, there is no hierarchy when replicating to or from multiple CouchDB instances. They’re all available as master nodes on their own.
 
-[PouchDB](https://github.com/pouchdb/pouchdb) is a CouchDB-compatible database that works in the browser, using a local storage backend. By simply calling [`db.sync`](https://pouchdb.com/api.html#sync), you’re able to continuously replicate two PouchDBs---or, as in our case, a PouchDB and a CouchDB---in real-time. Fortunately for us, {C,P}ouchDB replication covers the whole database, and isn’t sparse as with hyperdb.
+[PouchDB](https://github.com/pouchdb/pouchdb) is a CouchDB-compatible database that works in the browser, using a local storage backend. By simply calling [`db.sync`](https://pouchdb.com/api.html#sync), you’re able to continuously replicate two PouchDBs---or, as in our case, a PouchDB and a CouchDB---in real-time. Fortunately for us, {C,P}ouchDB replication covers the whole database and isn’t sparse as with hyperdb.
 
 Migrating (another time) to CouchDB worked flawlessly for us, as did replicating with PouchDB clients. Once the initial replication has succeeded, subsequent replications happen very quickly. You’ll need to create your indexes manually with the `couchdb-find` plugin for [running Mango queries](https://pouchdb.com/guides/mango-queries.html), though, but once set up, running queries on our data worked out fine.
 
