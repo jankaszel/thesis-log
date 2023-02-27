@@ -26,7 +26,7 @@ In the end, our experiment did work out, somehow, but we’d rather build upon a
 
 In [our prior work](https://dl.acm.org/citation.cfm?id=3343667), we’ve worked with a CouchDB backend---a document-based NoSQL database that includes a Rest API out-of-the-box. More interestingly, CouchDB follows a multi-master approach: Opposed to master-slave architectures, there is no hierarchy when replicating to or from multiple CouchDB instances. They’re all available as master nodes on their own.
 
-[PouchDB](https://github.com/pouchdb/pouchdb) is a CouchDB-compatible database that works in the browser, using a local storage backend. By simply calling [`db.sync`](https://pouchdb.com/api.html#sync), you’re able to continuously replicate two PouchDBs---or, as in our case, a PouchDB and a CouchDB---in real-time. Fortunately for us, {C,P}ouchDB replication covers the whole database and isn’t sparse as with hyperdb.
+[PouchDB](https://github.com/pouchdb/pouchdb) is a CouchDB-compatible database that works in the browser, using a local storage backend. By simply calling [`db.sync`](https://pouchdb.com/api.html#sync), you’re able to continuously replicate two PouchDBs---or, as in our case, a PouchDB and a CouchDB---in real-time. Fortunately for us, \{C,P\}ouchDB replication covers the whole database and isn’t sparse as with hyperdb.
 
 Migrating (another time) to CouchDB worked flawlessly for us, as did replicating with PouchDB clients. Once the initial replication has succeeded, subsequent replications happen very quickly. You’ll need to create your indexes manually with the `couchdb-find` plugin for [running Mango queries](https://pouchdb.com/guides/mango-queries.html), though, but once set up, running queries on our data worked out fine.
 
